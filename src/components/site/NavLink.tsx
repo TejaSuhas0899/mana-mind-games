@@ -37,7 +37,7 @@ export function NavLink({ label, hash, className, onNavigate }: NavLinkProps) {
   return (
     <Link
       to="/"
-      hash={hash || undefined}
+      {...(hash ? { hash } : {})}
       className={classes}
       onClick={onNavigate}
       activeOptions={{ exact: true }}
